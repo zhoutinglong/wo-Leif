@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="./slide.js"></script>
+	<style>
+	*{
+		margin:0;
+		padding:0;
+	}
+	#box{
+		width: 790px;
+		height: 340px;
+		position:relative;
+		margin:50px auto;
+		overflow:hidden;
+	}
+	#box ul{
+		width: 180px;
+		position:absolute;
+		bottom:20px;
+		left:40%;
+	}
+	#box ul li{
+		list-style-type: none;
+		float:left;
+		width: 20px;
+		height: 20px;
+		background: #555;
+		color:white;
+		margin:10px;
+		border-radius:15px;
+		text-align:center;
+		line-height: 20px;
+		cursor:pointer;
+	}
+	#box input{
+		width: 50px;
+		height: 50px;
+		position:absolute;
+		top:40%;
+		border-radius:25px;
+		border:0px;
+		outline:none;
+		margin:10px;
+	}
+	#btn2{
+		right:0px;
+	}
+	#box input:active{
+		background: red;
+	}
+	</style>
+	<script>
+	window.onload = function(){
+		var s = new Slide('box');
+		s.toggle();
+		s.auto();
+	}
+	</script>
+</head>
+<body>
+	<div id="box">
+		<img src="../img/slide1.jpg" alt="">
+		<img src="../img/slide2.jpg" alt="">
+		<img src="../img/slide3.jpg" alt="">
+		<img src="../img/slide4.jpg" alt="">
+		<ul>
+			<li style="background:red">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+		<input type="button" value="上一张" id="btn1">
+		<input type="button" value="下一张" id="btn2">
+	</div>
+</body>
+</html>
